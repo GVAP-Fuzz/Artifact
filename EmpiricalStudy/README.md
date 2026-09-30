@@ -8,9 +8,9 @@ EmpiricalStudy/
 └── README.md
 ```
 
-We perform an LLM-assisted survey and manually verify the reported issues and corresponding fixes, identifying 15 real atomicity violations. `EmpiricalStudyData.csv` lists the 15 confirmed and fixed atomicity violations collected from real-world open-source embedded software projects.
+We perform an LLM-assisted survey and manually verify the reported issues and corresponding fixes, identifying 15 real atomicity violations. `EmpiricalStudyData.csv` lists the 15 previously confirmed and fixed atomicity violations collected from real-world open-source embedded software projects.
 
-`EmpiricalStudyData.csv` has one row per atomicity violation, with the following columns: project name, issue link, execution context, single-variable/multi-variable atomicity violation type, global variable(s), GVAx access, interrupt handler access, GVAy access and the measured instruction distance between GVAx and GVAy.
+`EmpiricalStudyData.csv` has one row per atomicity violation, with the following columns: project name, issue link, execution context, atomicity violation type, global variable(s), locations of global variable accesses (X, INT and Y) and the ARM instruction distance between accesses X and Y.
 
 ## Distance measurement
 

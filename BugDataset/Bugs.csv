@@ -1,31 +1,31 @@
-#,Program,Single-variable/Multi-variable,Global variable(s),Execution context,GVAx,Interrupt handler access ,GVAy,Distance,Confirmed,Fixed,Harmfulness type
-1,cc26xx_gpio,Multi-variable,"gpio_chan[i].cb, gpio_chan[i].arg","Normal execution, Interrupt handler",gpio.c:102 Write ,gpio.c:129 Read,gpio.c:103 Write ,2,Yes,Yes,1 Invalid memory accesses/undefined behaviors/program crashes
-2,dose,Single-variable,ctx->state,"Normal execution, Interrupt handler",dose.c:675 Read,dose.c:309 Write,dose.c:680 Read ,14,Yes,No,3 Receive data loss
-3,dose,Single-variable,ctx->state,"Normal execution, Interrupt handler",dose.c:680 Read,dose.c:309 Write,dose.c:691 Write,32,Yes,No,3 Receive data loss
-4,gd32v_uart,Single-variable,isr_ctx[i].data_mask,"Normal execution, Interrupt handler",uart.c:134 Write ,uart.c:224 Read,uart.c:128 Write ,68,Yes,No,4 Benign
-5,gd32v_uart,Single-variable,isr_ctx[i].data_mask,"Normal execution, Interrupt handler",uart.c:128 Write ,uart.c:224 Read,uart.c:138 Write ,79,Yes,No,2 Data corruption
-6,gd32v_uart,Single-variable,isr_ctx[i].data_mask,"Normal execution, Interrupt handler",uart.c:128 Write ,uart.c:224 Read,uart.c:134 Write ,26,Yes,No,2 Data corruption
-7,gd32v_uart,Single-variable,isr_ctx[i].data_mask,"Normal execution, Interrupt handler",uart.c:138 Write ,uart.c:224 Read,uart.c:128 Write ,89,Yes,No,4 Benign
-8,gd32v_uart,Single-variable,isr_ctx[i].data_mask,"Normal execution, Interrupt handler",uart.c:128 Write ,uart.c:224 Read,uart.c:128 Write ,70,Yes,No,4 Benign
-9,gd32v_uart,Multi-variable,"isr_ctx[i].rx_cb, isr_ctx[i].arg","Normal execution, Interrupt handler",uart.c:90 Write ,uart.c:223 Read,uart.c:91 Write,2,Yes,No,1 Invalid memory accesses/undefined behaviors/program crashes
-10,gd32v_uart,Multi-variable,"isr_ctx[i].data_mask, isr_ctx[i].arg","Normal execution, Interrupt handler",uart.c:91 Write ,uart.c:223 Read,uart.c:92 Write ,0,Yes,No,1 Invalid memory accesses/undefined behaviors/program crashes
-11,gd32v_uart,Single-variable,isr_ctx[i].data_mask,"Normal execution, Interrupt handler",uart.c:92 Write ,uart.c:224 Read,uart.c:128 Write ,90,Yes,No,4 Benign
-12,gd32v_uart,Multi-variable,"isr_ctx[i].rx_cb, isr_ctx[i].arg","Normal execution, Interrupt handler",uart.c:67 Read,uart.c:224 Read,uart.c:92 Write ,67,Yes,No,1 Invalid memory accesses/undefined behaviors/program crashes
-13,nrf5x_gpio,Multi-variable,"exti_chan[i].cb, exti_chan[i].arg","Normal execution, Interrupt handler",gpio.c:189 Write ,gpio.c:236 Read,gpio.c:190 Write ,4,Yes,Yes,1 Invalid memory accesses/undefined behaviors/program crashes
-14,rp2350_uart,Multi-variable,"ctx[i].rx_cb, ctx[i].arg","Normal execution, Interrupt handler",uart.c:157 Write ,uart.c:250 Read,uart.c:158 Write ,2,Yes,No,1 Invalid memory accesses/undefined behaviors/program crashes
-15,rpx0xx_gpio,Single-variable,_cbs[i],"Normal execution, Interrupt handler",gpio.c:191 Write ,gpio.c:224 Read,gpio.c:191 Write,40,Yes,Yes,4 Benign
-16,rpx0xx_uart,Multi-variable,"ctx[i].rx_cb, ctx[i].arg","Normal execution, Interrupt handler",uart.c:199 Write ,uart.c:265 Read,uart.c:200 Write,2,Yes,No,1 Invalid memory accesses/undefined behaviors/program crashes
-17,samd5x_gpio,Single-variable,isr_ctx[i].cb,"Normal execution, Interrupt handler",gpio_ll_irq.c:198 Write ,gpio_ll_irq.c:278 Read ,gpio_ll_irq.c:203 Write ,15,Yes,Yes,1 Invalid memory accesses/undefined behaviors/program crashes
-18,samd5x_gpio,Multi-variable,"isr_ctx[i].cb, isr_ctx[i].arg","Normal execution, Interrupt handler",gpio_ll_irq.c:203 Write ,gpio_ll_irq.c:278 Read,gpio_ll_irq.c:204 Write ,2,Yes,Yes,1 Invalid memory accesses/undefined behaviors/program crashes
-19,samd5x_gpio,Multi-variable,"gpio_config[i].cb, gpio_config[i].arg","Normal execution, Interrupt handler",gpio.c:341 Write ,gpio.c:530 Read ,gpio.c:342 Write ,1,Yes,Yes,1 Invalid memory accesses/undefined behaviors/program crashes
-20,samd5x_uart,Multi-variable,"uart_ctx[i].rxs_cb, uart_ctx[i].rxs_arg","Normal execution, Interrupt handler",uart.c:259 Write ,uart.c:650 Read ,uart.c:260 Write ,2,Yes,No,1 Invalid memory accesses/undefined behaviors/program crashes
-21,samd5x_uart,Multi-variable,"uart_ctx[i].rx_cb, uart_ctx[i].arg","Normal execution, Interrupt handler",uart.c:259 Write ,uart.c:656 Read ,uart.c:260 Write ,1,Yes,No,1 Invalid memory accesses/undefined behaviors/program crashes
-22,samd5x_uart,Multi-variable,"uart_ctx[i].rxs_cb, uart_ctx[i].rxs_arg","Normal execution, Interrupt handler",uart.c:591 Write ,uart.c:650 Read ,uart.c:592 Write ,1,Yes,No,1 Invalid memory accesses/undefined behaviors/program crashes
-23,slipdev,Single-variable,dev->state,"Normal execution, Interrupt handler",net.c:87 Read ,slipdev.c:140 Write,net.c:92 Read ,28,Yes,No,3 Receive data loss
-24,slipdev,Single-variable,dev->state,"Normal execution, Interrupt handler",net.c:44 Read ,slipdev.c:154 Write,net.c:48 Write,12,Yes,No,1 Invalid memory accesses/undefined behaviors/program crashes
-25,stm32_uart,Single-variable,isr_ctx[i].data_mask,"Normal execution, Interrupt handler",uart.c:263 Write ,uart.c:520 Read,uart.c:257 Write ,76,Yes,No,4 Benign
-26,stm32_uart,Single-variable,isr_ctx[i].data_mask,"Normal execution, Interrupt handler",uart.c:257 Write ,uart.c:520 Read,uart.c:267 Write ,34,Yes,No,2 Data corruption
-27,stm32_uart,Single-variable,isr_ctx[i].data_mask,"Normal execution, Interrupt handler",uart.c:267 Write ,uart.c:520 Read,uart.c:257 Write ,57,Yes,No,4 Benign
-28,stm32_uart,Single-variable,isr_ctx[i].data_mask,"Normal execution, Interrupt handler",uart.c:257 Write ,uart.c:520 Read,uart.c:257 Write ,70,Yes,No,4 Benign
-29,stm32_uart,Single-variable,isr_ctx[i].data_mask,"Normal execution, Interrupt handler",uart.c:257 Write ,uart.c:520 Read,uart.c:263 Write ,14,Yes,No,2 Data corruption
-30,stm32_qdec,Multi-variable,"isr_ctx[qdec].cb, isr_ctx[qdec].arg","Normal execution, Interrupt handler",qdec.c:123 Write ,qdec.c:197 Read,qdec.c:124 Write ,2,Yes,Yes,1 Invalid memory accesses/undefined behaviors/program crashes
+#,Program,Violation type,Global variable(s),Execution context,Location of access X,Location of interrupting access,Location of access Y
+1,cc26xx_gpio,Multi-variable,"gpio_chan[i].cb, gpio_chan[i].arg","Normal execution, Interrupt handler",gpio.c:102 Write ,gpio.c:129 Read,gpio.c:103 Write 
+2,dose,Single-variable,ctx->state,"Normal execution, Interrupt handler",dose.c:675 Read,dose.c:309 Write,dose.c:680 Read 
+3,dose,Single-variable,ctx->state,"Normal execution, Interrupt handler",dose.c:680 Read,dose.c:309 Write,dose.c:691 Write
+4,gd32v_uart,Single-variable,isr_ctx[i].data_mask,"Normal execution, Interrupt handler",uart.c:134 Write ,uart.c:224 Read,uart.c:128 Write 
+5,gd32v_uart,Single-variable,isr_ctx[i].data_mask,"Normal execution, Interrupt handler",uart.c:128 Write ,uart.c:224 Read,uart.c:138 Write 
+6,gd32v_uart,Single-variable,isr_ctx[i].data_mask,"Normal execution, Interrupt handler",uart.c:128 Write ,uart.c:224 Read,uart.c:134 Write 
+7,gd32v_uart,Single-variable,isr_ctx[i].data_mask,"Normal execution, Interrupt handler",uart.c:138 Write ,uart.c:224 Read,uart.c:128 Write 
+8,gd32v_uart,Single-variable,isr_ctx[i].data_mask,"Normal execution, Interrupt handler",uart.c:128 Write ,uart.c:224 Read,uart.c:128 Write 
+9,gd32v_uart,Multi-variable,"isr_ctx[i].rx_cb, isr_ctx[i].arg","Normal execution, Interrupt handler",uart.c:90 Write ,uart.c:223 Read,uart.c:91 Write
+10,gd32v_uart,Multi-variable,"isr_ctx[i].data_mask, isr_ctx[i].arg","Normal execution, Interrupt handler",uart.c:91 Write ,uart.c:223 Read,uart.c:92 Write 
+11,gd32v_uart,Single-variable,isr_ctx[i].data_mask,"Normal execution, Interrupt handler",uart.c:92 Write ,uart.c:224 Read,uart.c:128 Write 
+12,gd32v_uart,Multi-variable,"isr_ctx[i].rx_cb, isr_ctx[i].arg","Normal execution, Interrupt handler",uart.c:67 Read,uart.c:224 Read,uart.c:92 Write 
+13,nrf5x_gpio,Multi-variable,"exti_chan[i].cb, exti_chan[i].arg","Normal execution, Interrupt handler",gpio.c:189 Write ,gpio.c:236 Read,gpio.c:190 Write 
+14,rp2350_uart,Multi-variable,"ctx[i].rx_cb, ctx[i].arg","Normal execution, Interrupt handler",uart.c:157 Write ,uart.c:250 Read,uart.c:158 Write 
+15,rpx0xx_gpio,Single-variable,_cbs[i],"Normal execution, Interrupt handler",gpio.c:191 Write ,gpio.c:224 Read,gpio.c:191 Write
+16,rpx0xx_uart,Multi-variable,"ctx[i].rx_cb, ctx[i].arg","Normal execution, Interrupt handler",uart.c:199 Write ,uart.c:265 Read,uart.c:200 Write
+17,samd5x_gpio,Single-variable,isr_ctx[i].cb,"Normal execution, Interrupt handler",gpio_ll_irq.c:198 Write ,gpio_ll_irq.c:278 Read ,gpio_ll_irq.c:203 Write 
+18,samd5x_gpio,Multi-variable,"isr_ctx[i].cb, isr_ctx[i].arg","Normal execution, Interrupt handler",gpio_ll_irq.c:203 Write ,gpio_ll_irq.c:278 Read,gpio_ll_irq.c:204 Write 
+19,samd5x_gpio,Multi-variable,"gpio_config[i].cb, gpio_config[i].arg","Normal execution, Interrupt handler",gpio.c:341 Write ,gpio.c:530 Read ,gpio.c:342 Write 
+20,samd5x_uart,Multi-variable,"uart_ctx[i].rxs_cb, uart_ctx[i].rxs_arg","Normal execution, Interrupt handler",uart.c:259 Write ,uart.c:650 Read ,uart.c:260 Write 
+21,samd5x_uart,Multi-variable,"uart_ctx[i].rx_cb, uart_ctx[i].arg","Normal execution, Interrupt handler",uart.c:259 Write ,uart.c:656 Read ,uart.c:260 Write 
+22,samd5x_uart,Multi-variable,"uart_ctx[i].rxs_cb, uart_ctx[i].rxs_arg","Normal execution, Interrupt handler",uart.c:591 Write ,uart.c:650 Read ,uart.c:592 Write 
+23,slipdev,Single-variable,dev->state,"Normal execution, Interrupt handler",net.c:87 Read ,slipdev.c:140 Write,net.c:92 Read 
+24,slipdev,Single-variable,dev->state,"Normal execution, Interrupt handler",net.c:44 Read ,slipdev.c:154 Write,net.c:48 Write
+25,stm32_uart,Single-variable,isr_ctx[i].data_mask,"Normal execution, Interrupt handler",uart.c:263 Write ,uart.c:520 Read,uart.c:257 Write 
+26,stm32_uart,Single-variable,isr_ctx[i].data_mask,"Normal execution, Interrupt handler",uart.c:257 Write ,uart.c:520 Read,uart.c:267 Write 
+27,stm32_uart,Single-variable,isr_ctx[i].data_mask,"Normal execution, Interrupt handler",uart.c:267 Write ,uart.c:520 Read,uart.c:257 Write 
+28,stm32_uart,Single-variable,isr_ctx[i].data_mask,"Normal execution, Interrupt handler",uart.c:257 Write ,uart.c:520 Read,uart.c:257 Write 
+29,stm32_uart,Single-variable,isr_ctx[i].data_mask,"Normal execution, Interrupt handler",uart.c:257 Write ,uart.c:520 Read,uart.c:263 Write 
+30,stm32_qdec,Multi-variable,"isr_ctx[qdec].cb, isr_ctx[qdec].arg","Normal execution, Interrupt handler",qdec.c:123 Write ,qdec.c:197 Read,qdec.c:124 Write 

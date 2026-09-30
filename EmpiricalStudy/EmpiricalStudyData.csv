@@ -1,4 +1,4 @@
-#,Project,Issue link,Execution context,Single-variable/Multi-variable,Global variable(s),GVAx access,Interrupt handler access,GVAy access,Distance
+#,Project,Issue link,Execution context,Violation type,Global variable(s),Location of global variable access X,Location of interrupting access,Location of global variable access Y,Distance between X and Y
 1,esp-idf,https://github.com/espressif/esp-idf/issues/15444,"Normal execution, Interrupt handler",Multi-variable,"i2c_master->trans_idx, i2c_master->status",i2c_master.c:470 Write,i2c_master.c:647 Read; i2c_master.c:648 Read,i2c_master.c:471 Write,2
 2,FreeRTOS-Kernel,https://github.com/FreeRTOS/FreeRTOS-Kernel/issues/419,"Normal execution, Interrupt handler",Single-variable,pxQueue->cRxLock,queue.c:277 Write,queue.c:1909 Write,queue.c:2344 Read,14
 3,mbed-os,https://github.com/ARMmbed/mbed-os/issues/15498,"Normal execution, Interrupt handler",Single-variable,obj_s->pending_slave_tx_master_rx,i2c_api.c:1681 Read,i2c_api.c:1575 Write; i2c_api.c:1562 Write,i2c_api.c:1681 Read,34
