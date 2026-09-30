@@ -1,0 +1,12 @@
+{
+  "_example": {
+    "name": "example",
+    "exe": "example",
+    "build_script": "build_harnesses.sh",
+    "watchlist": "watchlist.txt",
+    "priority": "priority.txt",
+    "collect_env": {},
+    "phase2": {"sites": [], "irqs": []},
+    "phase2_env": {}
+  }
+}
